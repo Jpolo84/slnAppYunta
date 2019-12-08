@@ -11,7 +11,7 @@ using Android.Views;
 
 namespace slnAppYunta
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -27,11 +27,15 @@ namespace slnAppYunta
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
+            
             drawer.AddDrawerListener(toggle);
             toggle.SyncState();
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.SetNavigationItemSelectedListener(this);
+
+            this.Title="hola";
+          //  Label = "@string/app_name", 
         }
 
         public override void OnBackPressed()
