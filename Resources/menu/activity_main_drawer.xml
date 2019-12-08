@@ -22,16 +22,12 @@
             android:title="Editar Perfil" />
     </group>
 
-    <item android:title="Dudas? consultanos">
+    <item android:title="Otros">
         <menu>
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Pasa la voz" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
         </menu>
     </item>
 
